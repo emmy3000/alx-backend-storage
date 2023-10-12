@@ -9,7 +9,7 @@ The following requirements must be met for this project:
 ### Operating System and Database Version:
 
 - All code files should be designed to run on Ubuntu 18.04 LTS.
-- MySQL 5.7 (specifically, version 5.7.30) should be used as the database system.
+- `MySQL 5.7` (specifically, version 5.7.30) should be used as the database system.
 
 ### Formatting and Conventions:
 
