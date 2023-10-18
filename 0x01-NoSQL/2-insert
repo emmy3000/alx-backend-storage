@@ -1,0 +1,3 @@
+// Script inserst documen in a collectin and contain one attribute
+// The database will be passed as an option of the `mongo` command
+db.school.insert({name: "Holberton school"})
