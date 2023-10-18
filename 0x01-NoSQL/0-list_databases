@@ -1,0 +1,2 @@
+// Script lists currrently existing databases.
+show dbs
