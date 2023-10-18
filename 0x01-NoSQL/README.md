@@ -185,6 +185,8 @@ drwxr-xr-x 1 root root   47 Mar 30  2022 ..
 {"t":{"$date":"2023-10-17T17:58:40.608+00:00"},"s":"I",  "c":"STORAGE",  "id":22262,   "ctx":"initandlisten"
 ```
 
+* The daemon's execution can be terminated with the Keybooard Interrupt <<**Ctl + C**>>
+
 ### Start MongoDB Shell
 - Open a new terminal and execute the command for invoking the MongoDB Shell.
 ```bash
