@@ -89,9 +89,9 @@ Successfully installed pip-23.3
 * As instructed in the project, the version of MongoDB to be utilized is v4.2 however on website it was clearly stated
 that isn't supported anymore and has been archived due to a time span (=<4 years) placed on every version's shipped to
 production, this leads to the installation of the version's predecessor instead being v4.4.
-* The following links to its Official website will provide more clarity.
-- - Information on [MongoDB Software Lifecycle Schedules](https://www.mongodb.com/support-policy/lifecycles)
-- [MongoDB 4.2 Manual](https://www.mongodb.com/docs/v4.2/).
+* The following statements contain links to its Official website providing more clarity.
+  - Information on [MongoDB Software Lifecycle Schedules](https://www.mongodb.com/support-policy/lifecycles)
+  - [MongoDB 4.2 Manual](https://www.mongodb.com/docs/v4.2/).
 
 ### MongoDB Installation
 - Remove existing MongoDB installations, if any.
