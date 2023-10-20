@@ -22,15 +22,15 @@ def log_stats(mongo_collection):
     :param mongo_collection: The pymongo collection object.
     """
     total_logs = mongo_collection.count_documents({})
-    print(f"{total_logs} logs")
+    print("{} logs".format(total_logs))
 
     print("Methods:")
     for method in METHODS:
         method_count = mongo_collection.count_documents({"method": method})
-        print(f"\tmethod {method}: {method_count}")
+        print("\tmethod {}: {}".format(method, method_count))
 
     status_check = mongo_collection.count_documents({"method": "GET", "path": "/status"})
-    print(f"method=GET, path=/status: {status_check}")
+    print("method=GET, path=/status: {}".format(status_check))
 
     print("IPs:")
     top_ips = mongo_collection.aggregate([
@@ -39,7 +39,7 @@ def log_stats(mongo_collection):
         {"$limit": 10}
     ])
     for ip in top_ips:
-        print(f"\t{ip['_id']}: {ip['count']}")
+        print("\t{}: {}".format(ip['_id'], ip['count']))
 
 
 if __name__ == "__main__":
