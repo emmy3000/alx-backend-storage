@@ -1,2 +1,3 @@
 // Delete all documents with the name "Holberton school" from the "school" collection.
+// Usage: `cat 7-delete | mongo my_db`
 db.school.deleteMany({name: "Holberton school"})
