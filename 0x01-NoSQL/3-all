@@ -1,3 +1,4 @@
 // Script lists all documents in a collection named `school`
 // It then passes the `db` database name as an option of the `mongo` command
+// Usage: `cat 3-all | mongo my_db`
 db.school.find()
