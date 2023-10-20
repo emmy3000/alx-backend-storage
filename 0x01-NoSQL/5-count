@@ -1,2 +1,3 @@
 // Count the total number of documents in the "school" collection.
+// Usage: `cat 5-count | mongo my_db`
 db.school.count()
