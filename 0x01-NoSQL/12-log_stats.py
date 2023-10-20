@@ -23,16 +23,16 @@ def log_stats(mongo_collection, option=None):
     """
     if option:
         value = mongo_collection.count_documents({"method": option})
-        print(f"\tmethod {option}: {value}")
+        print("\tmethod {}: {}".format(option, value))
     else:
         total_logs = mongo_collection.count_documents({})
-        print(f"{total_logs} logs")
+        print("{} logs".format(total_logs))
         print("Methods:")
         for method in METHODS:
             log_stats(mongo_collection, method)
         status_check = mongo_collection.count_documents(
             {"method": "GET", "path": "/status"})
-        print(f"method=GET, path=/status: {status_check}")
+        print("method=GET, path=/status: {}".format(status_check))
 
 
 if __name__ == "__main":
