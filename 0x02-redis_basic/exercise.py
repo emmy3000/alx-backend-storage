@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-
 """
 This script offers a Redis cache management class with
 storage, retrieval, method call counting, history recording,
