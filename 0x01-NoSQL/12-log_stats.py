@@ -29,12 +29,12 @@ def log_stats(mongo_collection, option=None):
         print("{} logs".format(total_logs))
         print("Methods:")
         for method in METHODS:
-            log_stats(mongo_collection, method)
-        status_check = mongo_collection.count_documents(
-            {"method": "GET", "path": "/status"})
-        print("method=GET, path=/status: {}".format(status_check))
+            value = mongo_collection.count_documents({"method": method})
+            print("\tmethod {}: {}".format(method, value))
+        status_check = mongo_collection.count_documents({"method": "GET", "path": "/status"})
+        print("{} status check".format(status_check))
 
 
-if __name__ == "__main":
+if __name__ == "__main__":
     nginx_collection = MongoClient('mongodb://127.0.0.1:27017').logs.nginx
     log_stats(nginx_collection)
