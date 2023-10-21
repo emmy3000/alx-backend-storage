@@ -89,6 +89,8 @@ def call_history(method: Callable) -> Callable:
 
         return data
 
+    return wrapper
+
 
 def replay(method: Callable) -> None:
     """
