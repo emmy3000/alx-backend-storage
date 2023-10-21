@@ -37,9 +37,10 @@ def count_calls(method: Callable) -> Callable:
         Returns:
             The return value of the decorated function.
         """
-        key = method.__qualname__
-        self._redis.incr(key)
-        return method(self, *args, **kwargs)
+        self._redis.rpush(inputs, str(args))
+        data = method(self, *args, **kwargs)
+        self._redis.rpush(outputs, str(data))
+        return data
 
     return wrapper
 
